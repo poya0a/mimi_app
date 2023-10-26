@@ -1,0 +1,56 @@
+// font
+$en: 'Noto Sans', 'Noto Serif', 'Roboto';
+$ko: 'Noto Sans', 'Noto Serif', 'sans-serif';
+
+// break-point
+$breakpoint-pc: 1024px; // 1024px ~
+$breakpoint-tablet: 768px; // 768px ~ 1023px
+$breakpoint-mobile: 360px; // 360px ~ 767px
+$breakpoint-smallest: 270px; //320px ~ 359px
+
+// 반응형 분기점
+@mixin container {
+  @media (max-width: #{$container-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$breakpoint-pc - 1px}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+// 320px 까지 맞출시 사용
+@mixin smallest {
+  @media (min-width:#{$breakpoint-smallest}) and (max-width:#{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+// colors
+$color_white: #ffffff;
+$color_black: #000000;
+
+$color_error: #d32f2f;
+$color_warning: #f9a825;
+$color_confirmed: #4caf50;
+
+$color_neutrals: #1f1f1f;
+$color_neutrals90: #343434;
+$color_neutrals80: #4b4b4b;
+$color_neutrals60: #787878;
+$color_neutrals40: #a5a5a5;
+$color_neutrals20: #d2d2d2;
+$color_neutrals10: #e8e8e8;
+$color_neutrals5: #f3f3f3;
+
+$color_primary: #89a8ff;
+$color_primary70: rgba(137,168,255, .7);
+$color_primary30: rgba(137,168,255, .3);
+
+$color_secondary_sky: #abbdff;
+$color_secondary_deep_blue: #070080,;

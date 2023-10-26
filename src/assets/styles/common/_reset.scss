@@ -1,0 +1,256 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+address,
+cite,
+code,
+del,
+em,
+img,
+ins,
+kbd,
+small,
+strong,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+option {
+  @include normal_14;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: $color_neutrals;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+* {
+  /* body에서 하면 pre, input, textarea등등에서 상속을 받지 않는 경우가 있어서 *을 사용 
+  but ! 중첩구조시 전부 상속이 되어 불편해지기에, 가장 큰 객체에 폰트 설정을 하고 모든 객체에 상속권을 준다.*/
+  margin: 0;
+  padding: 0;
+  word-break: keep-all; /* 단어단위로 브레이크가 됨 */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: inherit;
+}
+
+nav {
+  height: 100%;
+}
+
+body {
+  font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans KR', sans-serif;
+  line-height: 1.4;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: normal;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+a img {
+  display: block;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  background: none;
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  cursor: pointer;
+  outline-style: none;
+  color: $color_neutrals;
+  &:focus {
+    // border: 2px solid $color_white;
+  }
+}
+button a {
+  color: $color_neutrals; // ios 텍스트 컬러 수정
+}
+/* em {font-style: normal;} */
+
+textarea {
+  @include normal_14;
+  box-sizing: border-box;
+  box-shadow: none;
+  font-family: $ko;
+  color: $color_neutrals;
+  -webkit-appearance: none;
+  transition: border 0.3s;
+  outline-style: none;
+}
+img,
+svg,
+iframe,
+video {
+  display: block;
+  width: 100%;
+}
+input {
+  @include normal_14;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  font-family: $ko;
+  color: $color_neutrals;
+  outline-style: none;
+  transition: border 0.3s;
+  box-sizing: border-box;
+}
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select {
+  box-shadow: none;
+  box-sizing: border-box;
+  border-radius: 0;
+  appearance: none;
+  outline-style: none;
+  color: $color_neutrals;
+}
+select a {
+  color: $color_neutrals; // ios 텍스트 컬러 수정
+}
+select::-ms-expand {
+  display: none;
+}
+input::-webkit-autofill,
+input::-webkit-autofill:hover,
+input::-webkit-autofill:focus,
+input::-webkit-autofill:active {
+  -webkit-text-fill-color: $color_white;
+  -webkit-box-shadow: 0 0 0px 1000px transform inset;
+  box-shadow: 0 0 0px 1000px transform inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input::autofill,
+input::autofill:hover,
+input::autofill:focus,
+input::autofill:active {
+  -webkit-text-fill-color: $color_white;
+  -webkit-box-shadow: 0 0 0px 1000px transform inset;
+  box-shadow: 0 0 0px 1000px transform inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+/* 대체텍스트 */
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  font-size: 0;
+  line-height: 0;
+}
+
+.hidden {
+  position: fixed;
+  left: -10000px;
+}

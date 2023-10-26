@@ -1,0 +1,129 @@
+// 정렬
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+  @mixin center_top {
+    @include center;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  @mixin center_left {
+    @include center;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  
+  // typo
+  @mixin bold_32 {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  
+  @mixin bold_20 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  @mixin bold_18 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  @mixin bold_16 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  @mixin bold_14 {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  @mixin bold_12 {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  @mixin medium_32 {
+    font-weight: medium;
+    font-size: 32px;
+  }
+  
+  @mixin medium_24 {
+    font-weight: medium;
+    font-size: 24px;
+  }
+  
+  @mixin medium_20 {
+    font-weight: medium;
+    font-size: 20px;
+  }
+  
+  @mixin medium_18 {
+    font-weight: medium;
+    font-size: 18px;
+  }
+  
+  @mixin medium_16 {
+    font-weight: medium;
+    font-size: 16px;
+  }
+  
+  @mixin medium_14 {
+    font-weight: medium;
+    font-size: 14px;
+  }
+  @mixin medium_13 {
+    font-weight: medium;
+    font-size: 13px;
+  }
+  
+  @mixin medium_12 {
+    font-weight: medium;
+    font-size: 12px;
+  }
+  
+  @mixin normal_32 {
+    font-weight: normal;
+    font-size: 32px;
+  }
+  
+  @mixin normal_20 {
+    font-weight: normal;
+    font-size: 20px;
+  }
+  
+  @mixin normal_18 {
+    font-weight: normal;
+    font-size: 18px;
+  }
+  
+  @mixin normal_16 {
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+  @mixin normal_14 {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  
+  @mixin normal_13 {
+    font-weight: normal;
+    font-size: 13px;
+  }
+  
+  @mixin normal_12 {
+    font-weight: normal;
+    font-size: 12px;
+  }
+  
+  @mixin normal_10 {
+    font-weight: normal;
+    font-size: 10px;
+  }
+  
