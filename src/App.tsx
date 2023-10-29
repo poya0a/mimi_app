@@ -16,10 +16,11 @@ import FindPassword from './components/pages/FindPassword/FindPassword';
 
 import Layout from './components/layout/Layout';
 import Home from './components/pages/Home/Home';
-import Search from './components/pages/Search/Search';
+import Exploration from './components/pages/Exploration/Exploration';
 import Post from './components/pages/Post/Post';
 import News from './components/pages/News/News';
 import MyPage from './components/pages/MyPage/MyPage';
+import Search from './components/pages/Search/Search';
 
 function App() {
   return (
@@ -38,10 +39,11 @@ function App() {
               <Route path="/auth/find_password" element={<FindPassword />} />
 
               <Route path="/home" element={<Home />} />
-              <Route path="/search" element={<Search />} />
+              <Route path="/exploration" element={<Exploration />} />
               <Route path="/post" element={<Post />} />
               <Route path="/news" element={<News />} />
               <Route path="/myPage" element={<MyPage />} />
+              <Route path="/search" element={<Search />} />
             </Route>
           </Routes>
         </AxiosInterceptor>

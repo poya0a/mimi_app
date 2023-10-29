@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import { useAppDispatch } from '../../../store/store';
 import { setHeader } from '../../layout/slices/headerslice';
 
-const MyPage = () => {
+const Exploration = () => {
 
     const dispatch = useAppDispatch();
 
     useEffect(() => {
-        dispatch(setHeader({title: ""}));
+        dispatch(setHeader({title: "추천"}));
     },[]);
 
     return (
@@ -17,4 +17,4 @@ const MyPage = () => {
     );
 };
 
-export default MyPage;
+export default Exploration;

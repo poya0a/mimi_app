@@ -8,7 +8,13 @@
 
 // common
 @import 'common/reset';
+@import 'common/common';
+@import 'common/logo';
 
 // layout
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/footer';
 
 // pages
+@import 'pages/news';
